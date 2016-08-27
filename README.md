@@ -8,3 +8,18 @@ You might know how when we add short-codes and have to return the output instead
 
 I promised myself to document those edge cases with the code and reference to plugins/themes and authors to help me keep reference for me and for other WordPress Developers.
 
+## Table of Contents
+
+### ShortCodes
+
+#### Returning Short-Code functions' output where there is lot of stuff to output, use ob_start i.e. 
+```php
+$ob_start();
+//then all your echo calls or raw html here
+//then end with these three calls to properly return output
+$content = ob_get_contents();
+ob_end_clean();
+
+return $content;
+
+```
