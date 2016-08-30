@@ -14,7 +14,7 @@ I promised myself to document those edge cases with the code and reference to pl
 
 #### Returning Short-Code functions' output where there is lot of stuff to output, use ob_start i.e. 
 ```php
-$ob_start();
+ob_start();
 //then all your echo calls or raw html here
 //then end with these three calls to properly return output
 $content = ob_get_contents();
